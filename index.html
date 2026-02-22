@@ -6,67 +6,165 @@
   <title>GloArtInspirations | Handmade Girls Dresses</title>
   <meta name="description" content="GloArtInspirations — handmade boutique-style girls’ dresses. Shop on Etsy." />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#fbfbff; --ink:#1b2440; --muted:#5a668a;
-      --card:#ffffff; --line: rgba(27,36,64,.12);
-      --accent:#4f46e5; --shadow: 0 18px 50px rgba(20,30,60,.10);
-      --radius: 18px;
+      --bg:#fbfbff;
+      --ink:#1b2440;
+      --muted:#5a668a;
+      --card:#ffffff;
+      --line: rgba(27,36,64,.10);
+      --accent:#4f46e5;
+      --accent2:#7c3aed;
+      --wash1:#f3efff;
+      --wash2:#eef8ff;
+      --shadow: 0 18px 55px rgba(20,30,60,.10);
+      --radius: 22px;
     }
     *{ box-sizing:border-box; }
     body{
-      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--ink);
-      background: radial-gradient(900px 520px at 15% 0%, #f3efff 0%, var(--bg) 55%),
-                  radial-gradient(900px 520px at 85% 10%, #eef8ff 0%, var(--bg) 60%);
+      background:
+        radial-gradient(900px 520px at 15% 0%, var(--wash1) 0%, var(--bg) 55%),
+        radial-gradient(900px 520px at 85% 10%, var(--wash2) 0%, var(--bg) 60%),
+        linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,1));
     }
     a{ color:inherit; }
-    .wrap{ max-width:1020px; margin:0 auto; padding:28px 18px 64px; }
-    header{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
-    .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
-.logo{
-  width:140px;
-  height:140px;
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid rgba(200,180,220,.4);
-  box-shadow: 0 14px 42px rgba(79,70,229,.18);
-  background:#f7f1fb;
-  padding:8px;
-}
-
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  image-rendering:auto;
-  display:block;
-}
-    .brand strong{ display:block; font-size:18px; letter-spacing:.2px; }
-    .brand span{ display:block; font-size:13px; color:var(--muted); }
+    .wrap{ max-width:1040px; margin:0 auto; padding:28px 18px 72px; }
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; flex-wrap:wrap;
+      padding: 6px 0 10px;
+    }
+    .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+    .logo{
+      width:120px; height:120px;
+      border-radius:22px; overflow:hidden;
+      border:1px solid rgba(200,180,220,.4);
+      box-shadow: 0 14px 42px rgba(79,70,229,.18);
+      background:#f7f1fb;
+      padding:8px;
+    }
+    .logo img{
+      width:100%; height:100%;
+      object-fit:contain;
+      image-rendering:auto;
+      display:block;
+    }
+    .brand strong{
+      display:block;
+      font-family:"Playfair Display", serif;
+      font-size: 28px;
+      letter-spacing:.2px;
+      line-height:1.05;
+    }
+    .brand span{ display:block; font-size:14px; color:var(--muted); margin-top:3px; }
     nav{ display:flex; gap:10px; flex-wrap:wrap; }
     nav a{
-      text-decoration:none; padding: 10px 12px; border-radius:999px;
-      background: rgba(27,36,64,.04); border:1px solid rgba(27,36,64,.06);
-      font-weight:650;
+      text-decoration:none;
+      padding: 10px 12px;
+      border-radius:999px;
+      background: rgba(27,36,64,.04);
+      border:1px solid rgba(27,36,64,.06);
+      font-weight:600;
     }
+    nav a:hover{ background: rgba(27,36,64,.06); }
     .card{
-      background:var(--card); border:1px solid var(--line);
-      border-radius:var(--radius); padding:18px; box-shadow:var(--shadow);
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
     }
-    .hero{ margin-top:14px; display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; align-items:stretch; }
-    h1{ margin:0 0 10px; font-size: clamp(28px, 4vw, 44px); line-height:1.08; }
-    .lead{ margin:0 0 14px; color:var(--muted); font-size:16px; }
-    .cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+    .hero{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    h1{
+      margin:0 0 10px;
+      font-family:"Playfair Display", serif;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height:1.05;
+    }
+    .lead{ margin:0 0 14px; color:var(--muted); font-size:16px; line-height:1.65; }
+    .pills{ display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 2px; }
+    .pill{
+      font-size:12px;
+      padding: 6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(79,70,229,.15);
+      background: rgba(79,70,229,.07);
+      color:#2a2f4f;
+    }
+    .cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px; border-radius:14px; text-decoration:none; font-weight:750;
-      border:1px solid rgba(27,36,64,.12); background: rgba(27,36,64,.03);
+      padding:12px 14px;
+      border-radius:16px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid rgba(27,36,64,.12);
+      background: rgba(27,36,64,.03);
     }
-    .btn.primary{ background: var(--accent); color:#fff; border:none; }
-    section{ margin-top:14px; }
-    footer{ margin-top:22px; text-align:center; color:var(--muted); font-size:13px; }
-    @media (max-width: 860px){ .hero{ grid-template-columns: 1fr; } }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#fff;
+      border:none;
+      box-shadow: 0 14px 40px rgba(79,70,229,.18);
+    }
+    .section{ margin-top:16px; }
+    .section h2{
+      font-family:"Playfair Display", serif;
+      font-size: 22px;
+      margin:0 0 10px;
+    }
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(124,58,237,.25), transparent);
+      margin: 14px 0;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .item{
+      display:block;
+      border:1px solid rgba(27,36,64,.10);
+      border-radius:18px;
+      background: rgba(255,255,255,.75);
+      overflow:hidden;
+      text-decoration:none;
+    }
+    .thumb{
+      height:150px;
+      background: linear-gradient(135deg, rgba(79,70,229,.10), rgba(124,58,237,.08));
+    }
+    .item .pad{ padding:12px; }
+    .item b{ display:block; margin-bottom:6px; }
+    .item p{ margin:0; color:var(--muted); font-size:14px; line-height:1.45; }
+    .quote{
+      border:1px solid rgba(27,36,64,.10);
+      border-radius:18px;
+      padding:14px;
+      background: rgba(79,70,229,.04);
+    }
+    .small{ font-size:12px; color:var(--muted); }
+    footer{ margin-top:26px; text-align:center; color:var(--muted); font-size:13px; }
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns: 1fr; }
+      .logo{ width:120px; height:120px; }
+    }
   </style>
 </head>
 
@@ -84,6 +182,7 @@
       </a>
 
       <nav>
+        <a href="#featured">Featured</a>
         <a href="#shop">Shop</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -96,6 +195,13 @@
           Welcome to GloArtInspirations! I create boutique-style girls’ dresses that are comfortable,
           beautifully sewn, and perfect for birthdays, holidays, photos, and everyday wear.
         </p>
+
+        <div class="pills">
+          <span class="pill">Handmade</span>
+          <span class="pill">Gift-worthy</span>
+          <span class="pill">Custom-friendly</span>
+        </div>
+
         <div class="cta">
           <a class="btn primary" href="https://www.etsy.com/shop/gloartinspirations" target="_blank" rel="noopener">
             Shop on Etsy
@@ -109,17 +215,63 @@
       <div class="card" id="shop">
         <h2 style="margin:0 0 8px;">Shop info</h2>
         <p class="lead" style="margin:0;">
-          Based in La Center, Washington. Want help with sizing, shipping, or a custom idea?
+          Based in La Center, Washington. Have a question about sizing, shipping, or a custom idea?
           Click “Message me on Etsy.”
+        </p>
+        <div class="divider"></div>
+        <p class="small" style="margin:0;">
+          Tip: This site is your “home base.” Etsy handles checkout and shipping.
         </p>
       </div>
     </div>
 
-    <section class="card" id="contact">
-      <h2 style="margin:0 0 8px;">Contact</h2>
-      <p class="lead" style="margin:0 0 10px;">
-        The fastest way to reach me is Etsy messaging.
-      </p>
+    <div class="section card" id="featured">
+      <h2>Featured pieces</h2>
+      <p class="lead">A few customer favorites—tap to shop on Etsy.</p>
+
+      <div class="grid">
+        <a class="item" href="https://www.etsy.com/shop/gloartinspirations" target="_blank" rel="noopener">
+          <div class="thumb"></div>
+          <div class="pad">
+            <b>Twirl-worthy dresses</b>
+            <p>Handmade, comfortable, and photo-ready.</p>
+          </div>
+        </a>
+
+        <a class="item" href="https://www.etsy.com/shop/gloartinspirations" target="_blank" rel="noopener">
+          <div class="thumb"></div>
+          <div class="pad">
+            <b>Seasonal & themed</b>
+            <p>Holiday, character, and special occasion styles.</p>
+          </div>
+        </a>
+
+        <a class="item" href="https://www.etsy.com/messages/new" target="_blank" rel="noopener">
+          <div class="thumb"></div>
+          <div class="pad">
+            <b>Custom requests</b>
+            <p>Message me to talk sizing, fabric, and details.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px;">
+        <div class="quote">
+          <p style="margin:0 0 8px;">“Excellent quality and absolutely adorable!”</p>
+          <span class="small">— Etsy review</span>
+        </div>
+        <div class="quote">
+          <p style="margin:0 0 8px;">“Beautifully made and shipped quickly.”</p>
+          <span class="small">— Etsy review</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section card" id="contact">
+      <h2>Contact</h2>
+      <p class="lead">The fastest way to reach me is Etsy messaging.</p>
       <div class="cta">
         <a class="btn primary" href="https://www.etsy.com/messages/new" target="_blank" rel="noopener">
           Message me on Etsy
@@ -136,12 +288,4 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
